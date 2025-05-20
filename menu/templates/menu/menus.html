@@ -1,0 +1,9 @@
+
+{% load menu_tags %}
+<div class="menu-container">
+   {% for name in menu_name %}
+    {% autoescape off %}
+        {% draw_menu name|safe %}
+    {% endautoescape %}
+{% endfor %}
+</div>
